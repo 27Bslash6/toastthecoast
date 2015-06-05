@@ -191,11 +191,11 @@ gulp.task('compress', function () {
 });
 
 gulp.task('finalise', function () {
+    var conf;
 
     // Get document, or throw exception on error
     try {
-        var conf = yaml.safeLoad(fs.readFileSync('domain.yaml', 'utf8'));
-        //console.log(conf);
+        conf = yaml.safeLoad(fs.readFileSync('domain.yaml', 'utf8'));
     } catch (e) {
         console.log(e);
     }
