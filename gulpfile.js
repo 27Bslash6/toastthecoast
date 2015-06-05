@@ -15,6 +15,11 @@ var gpConcat = require('gulp-concat');
 
 var gpRename = require('gulp-rename');
 
+var replace = require('gulp-replace');
+
+var yaml = require('js-yaml');
+var fs   = require('fs');
+
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -26,6 +31,8 @@ var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
 var dirs = pkg['h5bp-configs'].directories;
+
+
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
@@ -169,7 +176,7 @@ gulp.task('lint:js', function () {
 });
 
 gulp.task('sass', function () {
-    gulp.src(dirs.src + '/scss/main.scss')
+    return gulp.src(dirs.src + '/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(dirs.src + '/css'));
 });
@@ -181,6 +188,27 @@ gulp.task('compress', function () {
         .pipe(gpRename('app.min.js'))
         .pipe(gpUglify())
         .pipe(gulp.dest(dirs.src + '/js'));
+});
+
+gulp.task('finalise', function () {
+
+    // Get document, or throw exception on error
+    try {
+        var conf = yaml.safeLoad(fs.readFileSync('domain.yaml', 'utf8'));
+        //console.log(conf);
+    } catch (e) {
+        console.log(e);
+    }
+
+    if (conf.assets.protocol.indexOf(':') === -1 && conf.assets.protocol !== '//') {
+        conf.assets.protocol = conf.assets.protocol + '://';
+    }
+
+    gulp.src(dirs.dist + '/index.html')
+        .pipe(replace(/(\.\/)(css|js|img)(\/[^\s]+)?/g, conf.assets.protocol + conf.assets.domain + '/' + conf.assets.path + '/$2$3'))
+        .pipe(gpRename('index.final.html'))
+        .pipe(gulp.dest(dirs.dist));
+
 });
 
 // ---------------------------------------------------------------------
