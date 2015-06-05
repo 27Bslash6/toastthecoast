@@ -710,8 +710,10 @@ a {
 
 #instagram {
   padding: 2rem 1rem;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
   #instagram iframe {
+    overflow: hidden;
     width: 100%;
     height: 220px; }
 
