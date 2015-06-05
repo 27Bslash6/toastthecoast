@@ -23,11 +23,20 @@ a {
 .background-image {
   background-repeat:no-repeat;
   background-position: center center;
-//  background-attachment: fixed;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.lazyloading {
+  opacity:0;
+}
+
+.lazyloaded {
+  @include transition(opacity, 350ms);
+  opacity:1;
 }
 
 #main {

@@ -1,4 +1,10 @@
 
+@mixin transition($transition-property, $transition-duration, $transition-timing-function: ease-out, $transition-delay:0){
+  -webkit-transition: $transition-property $transition-duration $transition-timing-function $transition-delay;
+  -moz-transition: $transition-property $transition-duration $transition-timing-function $transition-delay;
+  -o-transition: $transition-property $transition-duration  $transition-timing-function $transition-delay;
+  transition: $transition-property $transition-duration  $transition-timing-function $transition-delay;
+}
 
 /* ==========================================================================
    Helper classes

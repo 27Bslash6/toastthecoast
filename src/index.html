@@ -22,7 +22,17 @@
 
     <script src="./js/vendor/jquery-1.11.3.min.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+        function loadJS(u) {
+            var r = document.getElementsByTagName("script")[0], s = document.createElement("script");
+            s.src = u;
+            r.parentNode.insertBefore(s, r);
+        }
 
+        if (!window.HTMLPictureElement) {
+            loadJS("./js/vendor/ls.respimg.min.js");
+        }
+    </script>
 </head>
 
 <body>

@@ -578,7 +578,16 @@ a {
 .background-image {
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
   background-size: cover; }
+
+.lazyloading {
+  opacity: 0; }
+
+.lazyloaded {
+  -webkit-transition: opacity 350ms ease-out 0;
+  transition: opacity 350ms ease-out 0;
+  opacity: 1; }
 
 #main {
   margin: 0px auto;

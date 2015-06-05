@@ -573,10 +573,21 @@ a {
 .background-image {
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+.lazyloading {
+  opacity: 0; }
+
+.lazyloaded {
+  -webkit-transition: opacity 350ms ease-out 0;
+  -moz-transition: opacity 350ms ease-out 0;
+  -o-transition: opacity 350ms ease-out 0;
+  transition: opacity 350ms ease-out 0;
+  opacity: 1; }
 
 #main {
   margin: 0px auto;
