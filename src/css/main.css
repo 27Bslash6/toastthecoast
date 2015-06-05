@@ -759,16 +759,17 @@ a {
   background: #519548;
   min-height: 300px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  padding: 3rem 0; }
   #rsvpform a {
     color: #fff; }
   #rsvpform h2 {
-    margin-top: 0;
+    margin: 0 0 1rem;
     color: #fff; }
   #rsvpform form {
     margin: 0 auto;
     max-width: 40rem;
-    padding: 3rem 2rem 4rem; }
+    padding: 0 2rem; }
   #rsvpform input {
     line-height: 2rem;
     background: #0f6773;
