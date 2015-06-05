@@ -1,0 +1,19 @@
+{
+  "name": "toastcoast.org",
+  "version": "0.0.1",
+  "authors": [
+    "Ray Walker <hello@raywalker.it>"
+  ],
+  "description": "Toast the Coast call to action page",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lazysizes": "~1.1.2"
+  }
+}

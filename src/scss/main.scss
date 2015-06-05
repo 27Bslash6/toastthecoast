@@ -1,0 +1,503 @@
+@import "vendor/normalize";
+@import "vendor/h5bp";
+
+@import "variables";
+@import "helpers";
+
+@import "fonts";
+
+* {
+  box-sizing:border-box;
+}
+
+a {
+  color:$colour-green;
+  text-decoration:none;
+}
+
+.row {
+  max-width:1600px;
+  margin:0 auto;
+}
+
+.background-image {
+  background-repeat:no-repeat;
+  background-position: center center;
+//  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main {
+  margin: 0px auto;
+  background: #fff;
+  width:100%;
+}
+
+#header {
+  background:$colour-aqua;
+}
+
+#event {
+  background: $colour-aqua;
+  position:relative;
+  height:550px;
+
+  .background-image {
+    position:absolute;
+    width:100%;
+    height:100%;
+  }
+
+  .overlay {
+    background:transparentize(darken($colour-aqua,10%), .2);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    bottom:0;
+    font-family:'farrayregular', verdana;
+    padding:2rem;
+  }
+}
+
+.title {
+  width:50%;
+  float:left;
+
+  h1, h2 {
+    margin:0;
+    width:344px;
+    float:right;
+    clear:right;
+  }
+
+  h1 {
+    line-height:5.5rem;
+    font-size:5rem;
+    color:$colour-red;
+  }
+
+  h2 {
+    font-size:1.2rem;
+    color:#fff;
+  }
+
+}
+
+.wrap {
+  overflow:hidden;
+}
+
+.where {
+  width:50%;
+  float:left;
+
+  p {
+    float:left;
+    width:100%;
+  }
+
+  .date {
+    color:$colour-yellow;
+    margin-top:13.75rem;
+    font-size: 2rem;
+    margin-bottom:0;
+  }
+
+  .location {
+    margin-top:0;
+    font-size:1.2rem;
+    color:#fff;
+  }
+
+
+}
+
+.rsvp-button {
+  margin-top:2rem;
+  text-align: center;
+
+  span {
+    font-size:1.2rem;
+    background:$colour-aqua;
+    color:#fff;
+    display:inline-block;
+    padding:.5rem 1rem;
+
+    &:hover {
+      background:lighten($colour-aqua, 10%);
+    }
+  }
+}
+
+.background-image {
+
+  img {
+    width:100%;
+    height:auto;
+  }
+
+}
+
+.row-image {
+  text-align:center;
+
+  img {
+    margin:0 auto;
+    width:auto;
+    max-width:100%;
+  }
+}
+
+#text-wrap {
+  overflow:hidden;
+  background:$colour-green;
+
+  h2 {
+    margin-top:0;
+  }
+}
+
+#funtext {
+  color:#fff;
+}
+
+#funimage {
+  background: $colour-aqua;
+}
+
+#funandgames {
+  background: $colour-aqua;
+  padding: 2rem;
+  color: #fff;
+}
+
+#drilling {
+  background: $colour-green;
+  color: #fff;
+  padding: 2rem;
+}
+
+#jamheadroy {
+  clear:left;
+  padding:2rem;
+
+}
+
+#jam {
+  h3 {
+    color:$colour-red;
+  }
+}
+
+#connect {
+  h3 {
+    color:$colour-yellow;
+  }
+}
+
+#art {
+  h3 {
+    color:$colour-aqua;
+  }
+}
+
+#instagram {
+  padding:2rem 1rem;
+  background: #fff;
+
+  iframe {
+    width:100%;
+    height:220px;
+  }
+}
+
+#where {
+  overflow:hidden;
+  background: $colour-aqua;
+}
+
+#secret {
+  float: left;
+  width: 60%;
+  height: 400px;
+
+  iframe {
+    pointer-events:none;
+
+  }
+
+  &.click {
+
+    iframe {
+      pointer-events:auto;
+    }
+  }
+}
+
+#locationmap {
+  width:100%;
+  height:100%;
+}
+
+#social {
+//  background: url(http://www.greenpeace.org/canada/Global/canada/image/2015/05/toast/socailmedias.png) no-repeat;
+  width: 40%;
+  height: 400px;
+  float: left;
+  overflow:hidden;
+  text-align:center;
+
+  h3 {
+    font-size:2rem;
+    margin:2rem;
+    background:#fff;
+    display:block;
+    text-align:center;
+    color:$colour-green;
+    padding:2rem 0;
+  }
+
+  .hashtag {
+
+    text-align:center;
+    font-family:'farrayregular';
+    font-size:2rem;
+    text-transform:uppercase;
+
+    a {
+      text-decoration:none;
+      color:$colour-yellow;
+    }
+  }
+
+
+  .share {
+    text-align:center;
+    font-size:3rem;
+    overflow:hidden;
+    width:auto;
+    margin:0 auto;
+
+    a {
+      padding:0 1rem;
+      text-align:center;
+      color:#fff;
+      text-decoration:none;
+    }
+
+  }
+
+
+}
+
+#rsvpform {
+  background:$colour-green;
+  min-height:300px;
+
+  margin:0 auto;
+  text-align:center;
+
+  a {
+    color:#fff;
+  }
+
+  h2 {
+    margin-top:0;
+    color:#fff;
+  }
+
+  form {
+    margin:0 auto;
+    max-width:40rem;
+    padding:3rem 2rem 4rem;
+
+  }
+
+  input {
+    line-height:2rem;
+    background: #0f6773;
+    border: none;
+    width: 60%;
+    min-width:200px;
+    padding:.3rem 1rem;
+    color:#fff;
+  }
+
+  label {
+    color: transparent;
+  }
+
+  .eaSubmitButton {
+    background: $colour-red;
+    font-family:'farrayregular', verdana;
+    color:#fff;
+    //  width: 170px;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    border:none;
+
+    &:hover {
+      background:lighten($colour-red, 10%);
+    }
+  }
+
+}
+
+#logos {
+  padding:2rem 0;
+  background: #fff;
+
+  div {
+    display:inline-block;
+    width:24%;
+    text-align:center;
+
+    margin-bottom:1rem;
+
+    img {
+      max-width:70%;
+      height:auto;
+    }
+  }
+}
+
+#footer {
+
+  padding:3rem 0;
+  border-bottom:2rem solid $colour-red;
+
+
+  .banner {
+    max-width:100%;
+    height:auto;
+  }
+
+  .main_logos {
+    padding:0 2rem;
+    overflow:hidden;
+
+    img {
+      max-width:100%;
+    }
+  }
+
+  .greenpeace {
+    margin-top:20px;
+    float:left;
+  }
+
+  .fish {
+    float:right;
+  }
+
+}
+
+@media only screen and (max-width: 840px) {
+  #event {
+
+    height:400px;
+
+    .title {
+      width:100%;
+      float:none;
+      overflow:hidden;
+
+      h1, h2 {
+        float:left;
+        text-align:left;
+        width:70%;
+      }
+
+      h1 {
+        line-height:3.2rem;
+        font-size:3em;
+      }
+      h2 {
+        font-size:.9rem;
+      }
+    }
+
+    .where {
+      width:100%;
+      float:none;
+      overflow:hidden;
+      text-align:right;
+
+      .date {
+        font-size:1.2rem;
+        margin-top:1rem;
+      }
+    }
+
+    .rsvp-button {
+      margin-top:1rem;
+      width:100%;
+      clear:both;
+    }
+  }
+
+  #social {
+    .hashtag {
+      font-size:1.5rem;
+    }
+  }
+
+  #text-wrap {
+    h2 {
+      font-size:1rem;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 920px) {
+  #secret,
+  #social {
+    width:100%;
+    float:none;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+  /* Style adjustments for viewports that meet the condition */
+
+  #event {
+    .overlay {
+      padding:5%;
+    }
+  }
+
+  #jamheadroy {
+    padding:2rem 1rem;
+    overflow:hidden;
+
+    .block {
+      float:left;
+      width:33.3%;
+      padding:2rem;
+    }
+
+  }
+
+  #drilling,
+  #funandgames {
+    padding:3rem;
+    width:50%;
+    float:left;
+  }
+
+  #logos div {
+    width:7.8%;
+  }
+
+}
+
+@import "print";
