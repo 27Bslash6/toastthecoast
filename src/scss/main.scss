@@ -364,10 +364,11 @@ a {
 #logos {
   padding:2rem 0;
   background: #fff;
+  text-align:center;
 
   div {
     display:inline-block;
-    width:24%;
+    width:19%;
     text-align:center;
 
     margin-bottom:1rem;
@@ -393,6 +394,7 @@ a {
   .main_logos {
     padding:0 2rem;
     overflow:hidden;
+    text-align: center;
 
     img {
       max-width:100%;
@@ -400,12 +402,10 @@ a {
   }
 
   .greenpeace {
-    margin-top:20px;
-    float:left;
+    margin-right:5rem;
   }
 
   .fish {
-    float:right;
   }
 
 }
@@ -507,9 +507,9 @@ a {
     float:left;
   }
 
-  #logos div {
-    width:7.8%;
-  }
+//  #logos div {
+//    width:7.8%;
+//  }
 
 }
 

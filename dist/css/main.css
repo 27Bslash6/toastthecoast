@@ -806,10 +806,11 @@ a {
 
 #logos {
   padding: 2rem 0;
-  background: #fff; }
+  background: #fff;
+  text-align: center; }
   #logos div {
     display: inline-block;
-    width: 24%;
+    width: 19%;
     text-align: center;
     margin-bottom: 1rem; }
     #logos div img {
@@ -824,14 +825,12 @@ a {
     height: auto; }
   #footer .main_logos {
     padding: 0 2rem;
-    overflow: hidden; }
+    overflow: hidden;
+    text-align: center; }
     #footer .main_logos img {
       max-width: 100%; }
   #footer .greenpeace {
-    margin-top: 20px;
-    float: left; }
-  #footer .fish {
-    float: right; }
+    margin-right: 5rem; }
 
 @media only screen and (max-width: 840px) {
   #event {
@@ -887,9 +886,7 @@ a {
   #funandgames {
     padding: 3rem;
     width: 50%;
-    float: left; }
-  #logos div {
-    width: 7.8%; } }
+    float: left; } }
 
 /* ==========================================================================
    Print styles.
