@@ -6,7 +6,7 @@ var fs   = require('fs');
 
 var config = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
 
-request(config.cloudflare.api, {
+request.post(config.cloudflare.api, {
     form: {
         a:'fpurge_ts',
         tkn: config.cloudflare.token,
