@@ -1,0 +1,9 @@
+assets:
+  protocol: //
+  domain: greenpeace.raywalker.it
+  path: toastthecoast
+cloudflare:
+  api: https://www.cloudflare.com/api_json.html
+  domain: greenpeace.raywalker.it
+  email: admin@raywalker.it
+  token:

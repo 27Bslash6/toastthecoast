@@ -22,6 +22,7 @@
     "jshint-stylish": "^1.0.1",
     "mocha": "^2.2.4",
     "normalize.css": "3.0.3",
+    "request": "^2.57.0",
     "run-sequence": "^1.0.2"
   },
   "engines": {

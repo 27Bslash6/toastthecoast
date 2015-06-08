@@ -195,7 +195,7 @@ gulp.task('finalise', function () {
 
     // Get document, or throw exception on error
     try {
-        conf = yaml.safeLoad(fs.readFileSync('domain.yaml', 'utf8'));
+        conf = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
     } catch (e) {
         console.log(e);
     }
@@ -227,6 +227,7 @@ gulp.task('build', function (done) {
     runSequence(
         ['clean', 'lint:js', 'compress', 'sass'],
         'copy',
+        'finalise',
         done);
 });
 
