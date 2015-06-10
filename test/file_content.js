@@ -3,6 +3,7 @@
 var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
+var yaml = require('js-yaml');
 
 var pkg = require('./../package.json');
 var dirs = pkg['h5bp-configs'].directories;
@@ -57,21 +58,23 @@ function runTests() {
             checkString(path.resolve(dir, '.htaccess'), string, done);
         });
 
-        it('"index.html" should contain the correct jQuery version in the CDN URL', function (done) {
-            var string = 'ajax.googleapis.com/ajax/libs/jquery/' + pkg.devDependencies.jquery + '/jquery.min.js';
-            checkString(path.resolve(dir, 'index.html'), string, done);
-        });
-
         it('"index.html" should contain the correct jQuery version in the local URL', function (done) {
             var string = 'js/vendor/jquery-' + pkg.devDependencies.jquery + '.min.js';
             checkString(path.resolve(dir, 'index.html'), string, done);
         });
 
+        it('"index.final.html" should contain the correct destination domain', function (done) {
+            var conf = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
+            var string = conf.assets.domain + '/' + conf.assets.path + '/js/vendor/jquery-' + pkg.devDependencies.jquery + '.min.js';
+
+            checkString(path.resolve(dir, 'index.final.html'), string, done);
+        });
+
         it('"main.css" should contain a custom banner', function (done) {
-            var string = '/*! HTML5 Boilerplate v' + pkg.version +
-                         ' | ' + pkg.license.type + ' License' +
-                         ' | ' + pkg.homepage + ' */\n\n/*\n';
-            checkString(path.resolve(dir, 'css/main.css'), string, done);
+            var banner = '/*! ' + pkg.name + ' v' + pkg.version +
+                ' | ' + pkg.license.type + ' License' +
+                ' | ' + pkg.homepage + ' */\n\n';
+            checkString(path.resolve(dir, 'css/main.css'), banner, done);
         });
 
     });

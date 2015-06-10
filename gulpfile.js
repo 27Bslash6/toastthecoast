@@ -119,7 +119,7 @@ gulp.task('copy:license', function () {
 
 gulp.task('copy:main.css', function () {
 
-    var banner = '/*! HTML5 Boilerplate v' + pkg.version +
+    var banner = '/*! ' + pkg.name + ' v' + pkg.version +
         ' | ' + pkg.license.type + ' License' +
         ' | ' + pkg.homepage + ' */\n\n';
 
@@ -144,9 +144,13 @@ gulp.task('copy:misc', function () {
         '!' + dirs.src + '/css/main.css',
         '!' + dirs.src + '/js/modules{,/**}',
         '!' + dirs.src + '/js/plugins{,/**}',
+        '!' + dirs.src + '/js/vendor/lazysizes.js',
+        '!' + dirs.src + '/js/vendor/ls.bgset.js',
+        '!' + dirs.src + '/js/vendor/ls.respimg.js',
         '!' + dirs.src + '/fonts/*.html',
         '!' + dirs.src + '/fonts/*.css',
         '!' + dirs.src + '/fonts/*.txt',
+        '!' + dirs.src + '/fonts/*.zip',
         '!' + dirs.src + '/fonts/specimen_files{,/**}',
         '!' + dirs.src + '/index.html'
 
@@ -193,11 +197,12 @@ gulp.task('compress', function () {
 gulp.task('finalise', function () {
     var conf;
 
-    // Get document, or throw exception on error
     try {
         conf = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
     } catch (e) {
         console.log(e);
+        console.log('ERROR: Please copy the distribution "config.default.yaml" to "config.yaml" and adjust accordingly');
+        return;
     }
 
     if (conf.assets.protocol.indexOf(':') === -1 && conf.assets.protocol !== '//') {
