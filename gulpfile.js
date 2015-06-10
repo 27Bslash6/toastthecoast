@@ -18,7 +18,7 @@ var gpRename = require('gulp-rename');
 var replace = require('gulp-replace');
 
 var yaml = require('js-yaml');
-var fs   = require('fs');
+var fs = require('fs-extra');
 
 
 // Load all gulp plugins automatically
@@ -31,7 +31,6 @@ var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
 var dirs = pkg['h5bp-configs'].directories;
-
 
 
 // ---------------------------------------------------------------------
@@ -202,8 +201,7 @@ gulp.task('finalise', function () {
     } catch (e) {
         console.log('WARNING: Creating "config.yaml" from "config.default.yaml". Please adjust accordingly');
         try {
-            fs.createReadStream('config.default.yaml')
-                .pipe('config.yaml');
+            fs.copySync('config.default.yaml', 'config.yaml');
 
             conf = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
         } catch (e) {
