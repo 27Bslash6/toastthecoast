@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="447c4851-93d5-4132-a989-f6ce76d68546" name="Default" comment="Remove config.yaml from cache">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fonts/fontello-a7b964c2.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/vendor/lazysizes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/vendor/ls.bgset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/vendor/ls.respimg.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
     </list>
     <ignored path="toastcoast.org.iws" />
@@ -86,8 +82,8 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5330189" vertical-offset="2570" max-vertical-offset="3960">
-              <caret line="209" column="29" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.5330189" vertical-offset="2540" max-vertical-offset="3960">
+              <caret line="207" column="73" selection-start-line="207" selection-start-column="73" selection-end-line="207" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -867,8 +863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5330189" vertical-offset="2570" max-vertical-offset="3960">
-          <caret line="209" column="29" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.5330189" vertical-offset="2540" max-vertical-offset="3960">
+          <caret line="207" column="73" selection-start-line="207" selection-start-column="73" selection-end-line="207" selection-end-column="73" />
           <folding />
         </state>
       </provider>

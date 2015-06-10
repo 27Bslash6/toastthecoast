@@ -205,7 +205,7 @@ gulp.task('finalise', function () {
             fs.createReadStream('config.default.yaml')
                 .pipe('config.yaml');
 
-            conf = fs.readFileSync('config.yaml', 'utf8');
+            conf = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
         } catch (e) {
             console.error(e);
         }
