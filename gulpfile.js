@@ -200,9 +200,15 @@ gulp.task('finalise', function () {
     try {
         conf = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf8'));
     } catch (e) {
-        console.log(e);
-        console.log('ERROR: Please copy the distribution "config.default.yaml" to "config.yaml" and adjust accordingly');
-        return;
+        console.log('WARNING: Creating "config.yaml" from "config.default.yaml". Please adjust accordingly');
+        try {
+            fs.createReadStream('config.default.yaml')
+                .pipe('config.yaml');
+
+            conf = fs.readFileSync('config.yaml', 'utf8');
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     if (conf.assets.protocol.indexOf(':') === -1 && conf.assets.protocol !== '//') {

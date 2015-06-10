@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="447c4851-93d5-4132-a989-f6ce76d68546" name="Default" comment="Remove config.yaml from cache">
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/fonts/fontello-a7b964c2.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/index.base.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/vendor/lazysizes.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/vendor/ls.bgset.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/vendor/ls.respimg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.base.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/file_content.js" afterPath="$PROJECT_DIR$/test/file_content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/file_existence.js" afterPath="$PROJECT_DIR$/test/file_existence.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/main.css" afterPath="$PROJECT_DIR$/dist/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="toastcoast.org.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file_existence.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file_existence.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/file_existence.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1273585" vertical-offset="180" max-vertical-offset="2625">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2625">
+              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -90,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="3870">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="123" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.5330189" vertical-offset="2570" max-vertical-offset="3960">
+              <caret line="209" column="29" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -129,9 +122,9 @@
         <option value="$PROJECT_DIR$/config.yaml" />
         <option value="$PROJECT_DIR$/dist/404.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/test/file_content.js" />
         <option value="$PROJECT_DIR$/test/file_existence.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -854,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1665" max-vertical-offset="3870">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="123" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/file_content.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1350">
@@ -872,11 +857,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/file_existence.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1273585" vertical-offset="180" max-vertical-offset="2625">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2625">
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5330189" vertical-offset="2570" max-vertical-offset="3960">
+          <caret line="209" column="29" selection-start-line="209" selection-start-column="29" selection-end-line="209" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
